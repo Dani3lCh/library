@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <title>Library</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Welcome to the Library</h1>
+        <p>This is a simple library management system.</p>
+      </header>
+
+      <div class="AddbooksPopover">
+        <button id="openPopover" type="button" class="btn btn-success">
+          Add book
+        </button>
+        <div
+          id="popover"
+          style="
+            display: none;
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          "
+        >
+          <form action="" id="bookForm">
+            <label for="Title">Title</label>
+            <input type="text" id="Title" name="Title" required />
+            <br />
+            <label for="Author">Author</label>
+            <input type="text" id="Author" name="Author" required />
+            <br />
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" name="pages" required />
+            <br />
+            <label>Has it been read?</label>
+            <input type="radio" id="readYes" name="read" value="yes" />
+            <label for="readYes">Yes</label>
+            <input type="radio" id="readNo" name="read" value="no" />
+            <label for="readNo">No</label>
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              id="closePopover"
+            >
+              Cerrar
+            </button>
+            <button type="submit" class="btn btn-outline-primary" id="addBook">
+              Add Book
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="books">
+        <div id="bookGrid" class="book-grid-container">
+          <p id="empty-message">La biblioteca está vacía. ¡Agrega un libro!</p>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
